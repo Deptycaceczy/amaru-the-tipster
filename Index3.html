@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b20">
+<title>Amaru Football Hub</title>
+<style>
+:root{--bg:#080b20;--panel:#111735;--panel2:#171d43;--line:#2b3265;--text:#f5f6ff;--muted:#aab1d4;--blue:#39b8ff;--purple:#a56bff;--green:#55e6a5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#24205b 0,transparent 40%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1080px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 0 22px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.2rem;letter-spacing:.2px}.logo{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--purple));box-shadow:0 0 24px #795bff66;font-size:24px}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;padding:9px 12px;border-radius:10px}nav a:hover{background:var(--panel2);color:white}
+.hero{padding:32px 0 24px;display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:center}.eyebrow{color:var(--blue);text-transform:uppercase;font-size:.78rem;font-weight:800;letter-spacing:2px}
+h1{font-size:clamp(2.2rem,6vw,4.1rem);line-height:1.04;margin:12px 0;background:linear-gradient(90deg,#fff,#a7b7ff 65%,#c5a2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:590px}.hero-card{background:linear-gradient(145deg,#171d43,#10142e);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 15px 50px #0003}.hero-card .ball{font-size:3rem}.hero-card strong{display:block;font-size:1.15rem;margin:8px 0}.hero-card span{color:var(--muted);font-size:.9rem}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:26px 0 14px}.section-head h2{margin:0;font-size:1.5rem}.section-head p{margin:3px 0 0;color:var(--muted);font-size:.9rem}
+.pill{border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:#c6caff;font-size:.8rem}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.filter{background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:9px 13px;border-radius:11px;cursor:pointer}.filter.active,.filter:hover{color:white;border-color:var(--purple);background:#242052}
+.matches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.match{background:linear-gradient(140deg,var(--panel),#0e122b);border:1px solid var(--line);border-radius:18px;padding:17px;transition:transform .15s,border-color .15s}.match:hover{transform:translateY(-2px);border-color:#7568d9}.meta{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:.78rem}.league{color:#c4a8ff;font-weight:700}.teams{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:20px 0}.team{text-align:center;font-weight:750}.crest{display:grid;place-items:center;width:48px;height:48px;margin:0 auto 8px;border-radius:15px;background:var(--panel2);font-size:1.5rem;border:1px solid #333b75}.vs{color:var(--muted);font-size:.8rem;font-weight:800}.match-foot{border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:.83rem}.status{color:var(--green);font-weight:700}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.info{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.info .emoji{font-size:1.6rem}.info h3{margin:9px 0 5px}.info p{color:var(--muted);font-size:.9rem;margin:0}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{border-collapse:collapse;width:100%;min-width:420px;text-align:left}th,td{padding:13px 15px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:.8rem;text-transform:uppercase}td:first-child{font-weight:700}tr:last-child td{border-bottom:0}
+footer{margin-top:42px;padding:22px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+.note{font-size:.83rem;color:var(--muted);margin-top:12px}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:16px}.matches{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.wrap{padding:15px}.hero-card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">⚽</div><span>AMARU <span style="color:var(--blue)">FOOTBALL HUB</span></span></div>
+  <nav><a href="#fixtures">Fixtures</a><a href="#tables">League table</a><a href="#about">About</a></nav>
+</header>
+<main>
+<section class="hero">
+  <div><div class="eyebrow">Your football dashboard</div><h1>Every match.<br>One hub.</h1><p>Follow upcoming fixtures, match results, league standings and team news in one simple place. Made for football fans and mobile screens.</p></div>
+  <aside class="hero-card"><div class="ball">🌍 ⚽</div><strong>Football, made simple.</strong><span>Fixtures · Results · Standings · Team stats</span></aside>
+</section>
+
+<section id="fixtures">
+  <div class="section-head"><div><h2>Match centre</h2><p>Illustrative sample fixtures — replace with verified current information.</p></div><span class="pill">DEMO DATA</span></div>
+  <div class="filters" aria-label="Filter matches">
+    <button class="filter active" data-filter="all">All matches</button><button class="filter" data-filter="Premier League">Premier League</button><button class="filter" data-filter="La Liga">La Liga</button><button class="filter" data-filter="Serie A">Serie A</button>
+  </div>
+  <div class="matches" id="matches">
+    <article class="match" data-league="Premier League"><div class="meta"><span class="league">Premier League</span><span>Sample fixture</span></div><div class="teams"><div class="team"><div class="crest">🔴</div>North London FC</div><div class="vs">VS</div><div class="team"><div class="crest">🔵</div>Harbour City</div></div><div class="match-foot"><span>Kickoff: 15:00 (sample)</span><span class="status">Upcoming</span></div></article>
+    <article class="match" data-league="La Liga"><div class="meta"><span class="league">La Liga</span><span>Sample fixture</span></div><div class="teams"><div class="team"><div class="crest">⚪</div>Capital Athletic</div><div class="vs">VS</div><div class="team"><div class="crest">🟡</div>Coastal United</div></div><div class="match-foot"><span>Kickoff: 17:30 (sample)</span><span class="status">Upcoming</span></div></article>
+    <article class="match" data-league="Serie A"><div class="meta"><span class="league">Serie A</span><span>Sample fixture</span></div><div class="teams"><div class="team"><div class="crest">⚫</div>Metro FC</div><div class="vs">VS</div><div class="team"><div class="crest">🟢</div>Valley Rovers</div></div><div class="match-foot"><span>Kickoff: 19:45 (sample)</span><span class="status">Upcoming</span></div></article>
+    <article class="match" data-league="Premier League"><div class="meta"><span class="league">Premier League</span><span>Sample result</span></div><div class="teams"><div class="team"><div class="crest">🟣</div>River Town</div><div class="vs">1 – 1</div><div class="team"><div class="crest">🟠</div>Eastside FC</div></div><div class="match-foot"><span>Example score only</span><span class="status">Finished</span></div></article>
+  </div>
+  <p class="note">These teams, times and scores are fictional examples, not live fixtures or verified results.</p>
+</section>
+
+<section id="tables">
+  <div class="section-head"><div><h2>League table</h2><p>Example standings to show how the table will look.</p></div><span class="pill">SAMPLE</span></div>
+  <div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>Pts</th></tr></thead><tbody><tr><td>1</td><td>North London FC</td><td>5</td><td>4</td><td>1</td><td>0</td><td>13</td></tr><tr><td>2</td><td>Harbour City</td><td>5</td><td>3</td><td>1</td><td>1</td><td>10</td></tr><tr><td>3</td><td>Capital Athletic</td><td>5</td><td>2</td><td>2</td><td>1</td><td>8</td></tr><tr><td>4</td><td>Metro FC</td><td>5</td><td>1</td><td>1</td><td>3</td><td>4</td></tr></tbody></table></div>
+</section>
+
+<section id="about">
+  <div class="section-head"><div><h2>Explore the game</h2><p>Useful football information in one clean dashboard.</p></div></div>
+  <div class="grid3"><article class="info"><div class="emoji">📅</div><h3>Fixtures</h3><p>See upcoming matches, competitions and kickoff times.</p></article><article class="info"><div class="emoji">📊</div><h3>Statistics</h3><p>Track team form, results and league positions using verified data.</p></article><article class="info"><div class="emoji">🌐</div><h3>Team profiles</h3><p>Explore club details, competition history and match summaries.</p></article></div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> Amaru Football Hub</span><span>Football information for fans.</span></footer>
+</div>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+  button.classList.add('active');
+  const selected=button.dataset.filter;
+  document.querySelectorAll('.match').forEach(card=>{card.hidden=selected!=='all'&&card.dataset.league!==selected;});
+}));
+</script>
+</body>
+  </html>
+                              
